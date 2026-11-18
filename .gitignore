@@ -1,17 +1,33 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+# ==========================================
+# 1. LARAVEL BACKEND (/backend)
+# ==========================================
+backend/vendor/
+backend/node_modules/
+backend/.env
+backend/.env.local
+backend/.env.*.local
+!backend/.env.example
+backend/storage/*.key
+backend/storage/logs/*
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/bootstrap/cache/*.php
 
-# dependencies
-node_modules/
+# ==========================================
+# 2. REACT NATIVE / EXPO FRONTEND (/frontend)
+# ==========================================
+frontend/node_modules/
+frontend/.expo
+frontend/.expo/
+frontend/.expo/*
+frontend/dist/
+frontend/web-build/
+frontend/expo-env.d.ts
 
-# Expo
-.expo
-.expo/
-.expo/*
-dist/
-web-build/
-expo-env.d.ts
-
-# Native
+# ==========================================
+# 3. COMMON / NATIVE / OS FILES
+# ==========================================
 .kotlin/
 *.orig.*
 *.jks
@@ -19,25 +35,18 @@ expo-env.d.ts
 *.p12
 *.key
 *.mobileprovision
-
-# Metro
 .metro-health-check*
 
-# debug
+# Debug logs
 npm-debug.*
 yarn-debug.*
 yarn-error.*
+composer-setup.php
 
-# macOS
+# macOS / Windows OS files
 .DS_Store
+Thumbs.db
 *.pem
 
-# local env files
-.env*.local
-
-# typescript
+# TypeScript build info
 *.tsbuildinfo
-
-# generated native folders
-/ios
-/android
